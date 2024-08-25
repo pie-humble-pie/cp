@@ -21,15 +21,29 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
+typedef long long int ll;
 
 using namespace std;
 
+vector<ll> a, b;
+const ll MAX = 1e18;
+
+void solve(){
+    ll n, m, k;
+    cin >> n >> m >> k;
+    ll x = min(n, k);
+    ll y = min(m, k);
+    cout << x*y << endl;
+
+}
+
+
+
 int main() {
-    int t, x;
+    int t;
     cin >> t;
     for(int i = 0;i < t; i++){
-        cin >> x;
-        cout << "test id is: " << x << endl;
+        solve();
     }
 }
 

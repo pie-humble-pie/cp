@@ -21,15 +21,36 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
+typedef long long int ll;
 
 using namespace std;
 
+vector<ll> a;
+const ll MAX = 1e18;
+
+void solve(){
+    ll n;
+    cin >> n;
+    a.assign(n, 0);
+    unordered_map<ll, ll> mp;
+    for(int i = 0;i < n; i++){
+        cin >> a[i];
+        mp[a[i]]++;
+    }
+    ll maxc = 0;
+    for(auto [k, v] : mp){
+        maxc = max(maxc, v);
+    }
+    cout << n - maxc << endl; 
+}
+
+
+
 int main() {
-    int t, x;
+    int t;
     cin >> t;
     for(int i = 0;i < t; i++){
-        cin >> x;
-        cout << "test id is: " << x << endl;
+        solve();
     }
 }
 

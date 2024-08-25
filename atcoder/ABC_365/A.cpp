@@ -21,15 +21,24 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
+typedef long long int ll;
 
 using namespace std;
 
+
+
+void solve(){
+    ll x;
+    cin >> x;
+    if(x % 400 == 0) cout << 366 << endl;
+    else if(x % 100 == 0) cout << 365 << endl;
+    else if(x % 4 == 0) cout << 366 << endl;
+    else cout << 365 << endl;
+}
+
+
+
 int main() {
-    int t, x;
-    cin >> t;
-    for(int i = 0;i < t; i++){
-        cin >> x;
-        cout << "test id is: " << x << endl;
-    }
+    solve();
 }
 

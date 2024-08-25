@@ -21,15 +21,28 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
+typedef long long int ll;
 
 using namespace std;
 
+
+vector<ll> a;
+void solve(){
+    ll n, k;
+    cin >> n >> k;
+    a.assign(n, 0);
+
+    for(int i = 0;i < n; i++) cin >> a[i];
+
+    for(int i = n - k; i < n; i++) cout << a[i] << " ";
+    for(int i = 0;i < n - k; i++) cout << a[i] << " ";
+
+    cout << endl;
+}
+
+
+
 int main() {
-    int t, x;
-    cin >> t;
-    for(int i = 0;i < t; i++){
-        cin >> x;
-        cout << "test id is: " << x << endl;
-    }
+    solve();
 }
 
